@@ -533,7 +533,9 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
     public static $classMap = array (
         'App\\Http\\Controllers\\AccesoController' => __DIR__ . '/../..' . '/app/Http/Controllers/AccesoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\ExcelController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExcelController.php',
         'App\\Http\\Controllers\\InicioController' => __DIR__ . '/../..' . '/app/Http/Controllers/InicioController.php',
+        'App\\Models\\Fichada' => __DIR__ . '/../..' . '/app/Models/Fichada.php',
         'App\\Models\\Perfil' => __DIR__ . '/../..' . '/app/Models/Perfil.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\UserMetadata' => __DIR__ . '/../..' . '/app/Models/UserMetadata.php',

@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('perfil', function (Blueprint $table) {
             $table->id();
             $table->string('nombre',100);
+             //Agregado id acccesos 
+             /* Por cada tipo de acceso hay un perfil que los agrupa*/
+             $table->unsignedBigInteger('accesos_id');
+             $table->foreign('accesos_id')->references('id')->on('accesos')->onDelete('cascade');
+
         });
     }
 
