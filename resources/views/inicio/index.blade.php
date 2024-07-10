@@ -1,40 +1,20 @@
 @extends('welcome')
 
 @section('content')
-<div class="b-example-divider"></div>
-<br>
-<div class="alert alert-dark" role="alert" style="text-align: center; width: 90%; margin: 0 auto;" data-aos="fade-up">
-    <h3 >
-        ¡Bienvenido!<br>
-        
-        <hr>
-    </h3>
-    <p class="fst-italic" >
-        Este sistema fue creado para el área de Recursos Humanos e la Honorable Cámara de Diputados 
-    </p>
-    @if(Auth::check())
-    
-    @else
-    <a  class="btn btn-secondary"   style="color: rgb(246, 247, 246)" " >
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
-            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-          </svg>
 
-        Ingresar</a>
-    @endif
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Inicio</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
     
-    <hr>
-    
+    </div>
   </div>
-<br>
-<br>
+  <div class="alert alert-info" role="alert">
+    ¡Bienvenido!
+  </div>
+  <!--<canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
 
-
-
-
-
-
+</main>
 
 
 @endsection
