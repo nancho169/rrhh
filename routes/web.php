@@ -1,6 +1,8 @@
 <?php
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\AccesoController;
+use App\Http\Controllers\PersonasController;
+use App\Http\Controllers\GeneradorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExcelController;
 
@@ -18,5 +20,13 @@ Route::post('/acceso/registro',[AccesoController::class,'acceso_registro_post'])
 Route::get('/reloj/', [ExcelController::class, 'reloj'])->name('reloj');
 Route::get('/export-excel', [ExcelController::class, 'exportar'])->name('exportar');
 Route::post('/reloj/migra_archivo', [ExcelController::class, 'uploadExcel'])->name('uploadExcel');
+
+//PERSONAS
+Route::get('/personas', [PersonasController::class, 'index'])->name('index');
+
+//GENERADOR
+Route::get('/generador', [GeneradorController::class, 'tablas'])->name('tablas');
+Route::post('/generador/campos/', [GeneradorController::class, 'campos'])->name('campos');
+
 
 

@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('accesos', function (Blueprint $table) {
             $table->id();
+            $table->string('apliacion_url');
+            $table->string('aplicacion_nombre');
+            $table->string('funcion');
+            $table->boolean('permiso_alta');
+            $table->boolean('permiso_baja');
+            $table->boolean('permiso_modificacion');
             
         });
     }

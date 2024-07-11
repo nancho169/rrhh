@@ -20,16 +20,20 @@ return new class extends Migration
             $table->string('email');
             $table->string('img');
             $table->boolean('activo');
-            $table->integer('cuil')->nullable();
-            $table->integer('dni')->nullable();
-            $table->time('fecha_nac')->nullable();
-            $table->string('telefono',50);
+            $table->BigInteger('cuil')->nullable();
+            $table->BigInteger('dni')->nullable();
+            $table->time('fecha_nacimiento')->nullable();
+            $table->time('fecha_ingreso')->nullable();
+            $table->BigInteger('telefono');
             $table->string('direccion');
+            $table->string('cargo');
+            $table->string('funcion');
             $table->rememberToken();
             $table->timestamps();
             /* Clave foranea de organigrama */
             $table->unsignedBigInteger('organigrama_id');
             $table->foreign('organigrama_id')->references('id')->on('organigrama')->onDelete('cascade');
+            $table->string('tipo_empleado');
         });
     }
 
