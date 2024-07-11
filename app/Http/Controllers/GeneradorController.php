@@ -250,7 +250,7 @@ class GeneradorController extends Controller
         }        
 
 
-        return view('generador.campos', compact('codigo','tabla'));
+        return view('generador.campos', compact('estructura','codigo','tabla'));
      
     }
 
