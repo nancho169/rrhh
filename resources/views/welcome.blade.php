@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" >
 
     <style>
+      
+    pre code {
+        display: block;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        user-select: all; /* Permite la selección del texto */
+    }
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
