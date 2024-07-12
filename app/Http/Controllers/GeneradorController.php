@@ -31,7 +31,7 @@ class GeneradorController extends Controller
         foreach ($estructura as $dato){
         switch ($dato->Type){ 
                 case (strpos($dato->Type, 'int') !== false):
-                   $codigo .='<div class="row g-3 align-items-center">
+                   $codigo .='<div class="col-mb-3 col-sm-3">
                         <div class="col-auto">
                         <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                         </div>
@@ -47,7 +47,7 @@ class GeneradorController extends Controller
                     break;
                 
                 case (strpos($dato->Type, 'BigInt') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -63,7 +63,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'varchar') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -79,7 +79,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'text') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -95,7 +95,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'time') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -111,7 +111,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'timestamp') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -127,7 +127,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'date') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -143,7 +143,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'datetime') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -159,7 +159,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'float') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -175,7 +175,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'double') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -191,7 +191,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'decimal') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -207,7 +207,7 @@ class GeneradorController extends Controller
                      break;
                  
                 case (strpos($dato->Type, 'email') !== false):
-                    $codigo.=' <div class="row g-3 align-items-center">
+                    $codigo.=' <div class="col-mb-3 col-sm-3">
                          <div class="col-auto">
                          <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                          </div>
@@ -223,7 +223,7 @@ class GeneradorController extends Controller
                      break;
                  
                         case (strpos($dato->Type, 'boolean') !== false):
-                   $codigo.=' <div class="row g-3 align-items-center">
+                   $codigo.=' <div class="col-mb-3 col-sm-3">
                             <div class="col-auto">
                             <label for="'.$dato->Field.'" class="col-form-label">'.$dato->Field.'</label>
                             </div>

@@ -1,196 +1,137 @@
 @extends('welcome')
 
 @section('content')
-<form>
- 
-@foreach ($estructura as $dato)
+    <br>
+    <h2>Padrón personas</h2>
+    <hr>
 
-<main>
-@switch ($dato->Type) 
-        @case (strpos($dato->Type, 'int') !== @false)
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                <label for="" class="col-form-label">{{$dato->Field}}</label>
+    <form>
+        <fieldset>
+            <div class='row'>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="id" class="col-form-label">id</label> </div>
+                    <div class="col-auto"> <input type="number" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
                 </div>
-                <div class="col-auto">
-                    <input type="{{  $type = 'number'; }}" class="form-control"> 
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="legajo" class="col-form-label">legajo</label> </div>
+                    <div class="col-auto"> <input type="number" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
                 </div>
-                <div class="col-auto">
-                <span id="passwordHelpInline" class="form-text">
-                    Must be 8-20 characters long.
-                </span>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="nombre" class="col-form-label">nombre</label> </div>
+                    <div class="col-auto"> <input type="text" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
                 </div>
-            </div>
-        @break
-        @case (strpos($dato->Type, 'BigInt') !== @false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'number'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-            <span id="passwordHelpInline" class="form-text">
-                Must be 8-20 characters long.
-            </span>
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'varchar') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'text'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-           
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'text') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'text'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-        
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'time') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'time'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-           
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'timestamp') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'time'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-           
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'date') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'date'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-           
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'datetime') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'date'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-           
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'float') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'number'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-           
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'double') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'number'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-           
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'decimal') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'number'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-           
-            </div>
-        </div>
-        @break
-        @case (strpos($dato->Type, 'email') !== false)
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-            <label for="" class="col-form-label">{{$dato->Field}}</label>
-            </div>
-            <div class="col-auto">
-                <input type="{{  $type = 'email'; }}" class="form-control"> 
-            </div>
-            <div class="col-auto">
-           
-            </div>
-        </div>
-            @break
-                @case (strpos($dato->Type, 'boolean') !== false)
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                    <label for="" class="col-form-label">{{$dato->Field}}</label>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="apellido" class="col-form-label">apellido</label> </div>
+                    <div class="col-auto"> <input type="text" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="email" class="col-form-label">email</label> </div>
+                    <div class="col-auto"> <input type="text" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="img" class="col-form-label">img</label> </div>
+                    <div class="col-auto"> <input type="text" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="activo" class="col-form-label">activo</label> </div>
+                    <div class="col-auto"> <input type="number" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="cuil" class="col-form-label">cuil</label> </div>
+                    <div class="col-auto"> <input type="number" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="dni" class="col-form-label">dni</label> </div>
+                    <div class="col-auto"> <input type="number" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="fecha_nacimiento" class="col-form-label">fecha_nacimiento</label>
                     </div>
-                    <div class="col-auto">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                              Default checkbox
-                            </label>
-                          </div>
-                        
-                    </div>
-                    <div class="col-auto">
-                
-                    </div>
+                    <div class="col-auto"> <input type="time" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
                 </div>
-            @break
-        @default
-             {{@$type = 'Unknown';}}
-
-@endswitch
-@endforeach
-</form>
-</main>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="fecha_ingreso" class="col-form-label">fecha_ingreso</label> </div>
+                    <div class="col-auto"> <input type="time" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="telefono" class="col-form-label">telefono</label> </div>
+                    <div class="col-auto"> <input type="number" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="direccion" class="col-form-label">direccion</label> </div>
+                    <div class="col-auto"> <input type="text" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="cargo" class="col-form-label">cargo</label> </div>
+                    <div class="col-auto"> <input type="text" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="funcion" class="col-form-label">funcion</label> </div>
+                    <div class="col-auto"> <input type="text" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="remember_token" class="col-form-label">remember_token</label>
+                    </div>
+                    <div class="col-auto"> <input type="text" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="created_at" class="col-form-label">created_at</label> </div>
+                    <div class="col-auto"> <input type="time" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="updated_at" class="col-form-label">updated_at</label> </div>
+                    <div class="col-auto"> <input type="time" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="organigrama_id" class="col-form-label">organigrama_id</label>
+                    </div>
+                    <div class="col-auto"> <input type="number" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+                <div class="col-mb-3 col-sm-3">
+                    <div class="col-auto"> <label for="tipo_empleado" class="col-form-label">tipo_empleado</label> </div>
+                    <div class="col-auto"> <input type="text" class="form-control"> </div>
+                    <div class="col-auto"> <span id="passwordHelpInline" class="form-text"> Must be 8-20 characters long.
+                        </span> </div>
+                </div>
+            </div>
+            <fieldset>
+    </form>
 @endsection
