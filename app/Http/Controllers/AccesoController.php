@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+
 use App\Models\UserMetadata;
 
 
@@ -104,14 +105,18 @@ class AccesoController extends Controller
         }
 
         public function logout(Request $request)
-    {
-        Auth::logout();
+            {
+                Auth::logout();
 
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        $request->session()->flash('css','success');
-        $request->session()->flash('mensaje','Se ha ccerrado la sesión exitosamente');
-        return redirect('/');
-    }
+                $request->session()->invalidate();
+                $request->session()->regenerateToken();
+                $request->session()->flash('css','success');
+                $request->session()->flash('mensaje','Se ha ccerrado la sesión exitosamente');
+                return redirect('/');
+            }
+        public function acceso_aplicaciones(){
+
+            return view('acceso.acceso_aplicaciones');
+            }
         
     }
