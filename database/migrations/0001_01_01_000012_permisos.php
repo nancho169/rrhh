@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('accesos', function (Blueprint $table) {
+        Schema::create('permisos', function (Blueprint $table) {
             $table->id();
-            $table->string('apliacion_url');
-            $table->string('aplicacion_nombre');
-            $table->string('funcion');
-            $table->boolean('permiso_alta');
-            $table->boolean('permiso_baja');
-            $table->boolean('permiso_modificacion');
+            $table->boolean('alta');
+            $table->boolean('modificacion');
+            $table->boolean('baja');
             
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('accesos');
+        Schema::dropIfExists('permisos');
     }
 };
