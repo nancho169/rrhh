@@ -47,7 +47,9 @@ class ExcelController extends Controller
                 'id_usuario' => $row[0],
                 'nombre' => $row[1],
                 'fichada' => $row[2],
-                'area' => $row[3]
+                'entrada' => $row[3],
+                'salida' => $row[4],
+                'descripcion' => $row[5]
 
             ]);
         }

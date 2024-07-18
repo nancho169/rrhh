@@ -14,10 +14,13 @@ return new class extends Migration
         Schema::create('tabla_fichada', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('area',50);
-            $table->integer('numero_identificador');
-            $table->string('nombre_archivo',50);
+            $table->integer('id_usuario');
+            $table->string('nombre',50);
             $table->timestamp('fichada')->nullable();
+            $table->string('entrada');
+            $table->string('salida');
+            $table->string('descripcion');
+            
 
         });
     }

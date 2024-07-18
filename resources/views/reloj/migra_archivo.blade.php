@@ -10,7 +10,7 @@
         @foreach ($data as $row)
             <tr><!-- fila -->
                 @foreach ($row as $cell) <!-- recorre fila  -->
-                    <td>{{ $cell }}</td> <!-- celda -->
+                    <td>{{ $cell->id_usuario }}</td> <!-- celda -->
                 @endforeach
             </tr>
 
