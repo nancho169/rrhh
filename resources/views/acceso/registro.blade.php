@@ -1,14 +1,13 @@
 @extends('welcome')
 
 @section('content')
-<div class="b-example-divider"></div>
-    <br>
 
+<br>
 
-    <div class="row g-0">
+    <div class="row">
       
       
-      <div class="card bg-gray-100" style="width: 30rem; margin: 0 auto;">
+ 
         
         <div class="card-body">
           <h5 class="card-title" style="text-align: center;">Registro de usuario</h5>
@@ -21,14 +20,6 @@
             <div class="form-group">
                 <label for="correo">E-mail</label>
                 <input type="text" class="form-control" id="correo" name="correo" value="{{old('correo')}}">
-            </div>
-            <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input type="number" class="form-control" id="telefono" name="telefono" value="{{old('telefono')}}">
-            </div>
-            <div class="form-group">
-                <label for="direccion">Dirección</label>
-                <input type="text" class="form-control" id="direccion" name="direccion" value="{{old('direccion')}}">
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
@@ -44,7 +35,7 @@
          </form>
         </div>
         <x-flash />
-      </div>
+      
 
     </div>
     <br>

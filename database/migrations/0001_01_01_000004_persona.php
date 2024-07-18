@@ -17,6 +17,8 @@ return new class extends Migration
             $table->bigInteger('legajo');
             $table->string('nombre');
             $table->string('apellido');
+            $table->string('apellido_nombre');
+            $table->integer('codigo');
             $table->string('email');
             $table->string('img');
             $table->boolean('activo');

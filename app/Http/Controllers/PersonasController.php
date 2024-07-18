@@ -15,6 +15,18 @@ class PersonasController extends Controller
         //return response()->json($estructura);
     }
 
+    public function padron()
+    {
+        //$table = 'rrhh.persona';
+        $personas = DB::select("select codigo,apellido_nombre,o.descripcion
+                                    from persona as p, organigrama as o 
+                                    where p.organigrama_id=o.id");
+
+        //$personas = Persona::orderBy('id','desc')->get();
+        return view('persona.padron', compact('personas'));
+        //return response()->json($estructura);
+    }
+
     
 
 }

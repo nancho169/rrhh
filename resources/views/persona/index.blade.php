@@ -1,6 +1,8 @@
 @extends('welcome')
 
 @section('content')
+
+
     <br>
     <h2>Padrón personas</h2>
     <hr>
@@ -134,4 +136,7 @@
             </div>
             <fieldset>
     </form>
+
+
+
 @endsection

@@ -66,17 +66,11 @@ class AccesoController extends Controller
                 [
                     'nombre'=>'required|min:4',
                     'correo'=>'required|email:rfc,dns|unique:users,email',
-                    'telefono'=>'required',
-                    'direccion'=>'required',
                     'password'=>'required|min:5|confirmed'
             ],
                 [
                     'nombre.required'=>'El campo Nombre está vacío',
                     'nombre.min'=>'El campo Nombre debe terner mínimo 5 caracteres',
-                    'correo.required'=>'El campo E-Mail está vacío',
-                    'correo.email'=>'El E-Mail ingresado no es válido',
-                    'telefono.required'=>'El campo Teléfono está vacío',
-                    'direccion.required'=>'El campo Dirección está vacío',
                     'password.required'=>'El campo Password está vacío',
                     'password.min'=>'El campo Password debe tener al menos 6 caracteres',
                     'password.confirmed'=>'Las contraseñas ingresadas no coiciden',
@@ -94,9 +88,8 @@ class AccesoController extends Controller
                 UserMetadata::create(
                     [
                         'users_id'=>$user->id,
-                        'perfil_id'=>2,
-                        'telefono'=>$request->input('telefono'),
-                        'direccion'=>$request->input('direccion')
+                        'perfil_id'=>2
+                       
                     ]
                 );
                 $request->session()->flash('css','success');
@@ -114,9 +107,6 @@ class AccesoController extends Controller
                 $request->session()->flash('mensaje','Se ha ccerrado la sesión exitosamente');
                 return redirect('/');
             }
-        public function acceso_aplicaciones(){
-
-            return view('acceso.acceso_aplicaciones');
-            }
+       
         
     }

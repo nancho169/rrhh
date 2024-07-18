@@ -1,7 +1,7 @@
 @extends('welcome')
 
 @section('content')
-<div class="b-example-divider"></div>
+
     <br>
 
     <div class="container text-center alert alert-dark">

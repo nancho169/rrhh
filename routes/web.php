@@ -2,8 +2,11 @@
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\AccesoController;
 use App\Http\Controllers\PersonasController;
+use App\Http\Controllers\OrganigramaController;
 use App\Http\Controllers\ProyectosController;
 use App\Http\Controllers\GeneradorController;
+use App\Http\Controllers\JustificacionController;
+use App\Http\Controllers\GruposController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExcelController;
 
@@ -16,7 +19,7 @@ Route::get('/acceso/loginout',[AccesoController::class,'logout'])->name('logout'
 Route::POST('/acceso/login',[AccesoController::class,'acceso_login_post'])->name('acceso_login_post');
 Route::get('/acceso/registro',[AccesoController::class,'acceso_registro'])->name('acceso_registro');
 Route::post('/acceso/registro',[AccesoController::class,'acceso_registro_post'])->name('acceso_registro_post');
-Route::get('/acceso/acceso_aplicaciones',[AccesoController::class,'acceso_aplicaciones'])->name('acceso_aplicaciones');
+
 
 //EXPOTAR EXCEL
 Route::get('/reloj/', [ExcelController::class, 'reloj'])->name('reloj');
@@ -25,6 +28,13 @@ Route::post('/reloj/migra_archivo', [ExcelController::class, 'uploadExcel'])->na
 
 //PERSONAS
 Route::get('/personas', [PersonasController::class, 'index'])->name('index');
+Route::get('/personas/padron', [PersonasController::class, 'padron'])->name('padron');
+
+//ORGANIGRAMA
+Route::get('/organigrama/listado', [OrganigramaController::class, 'listado'])->name('organigrama');
+
+//JUSTIFICACIONES
+Route::get('/justificaciones/listado', [JustificacionController::class, 'listado'])->name('justificaciones');
 
 //GENERADOR
 Route::get('/generador', [GeneradorController::class, 'tablas'])->name('tablas');
@@ -34,3 +44,5 @@ Route::post('/generador/campos/', [GeneradorController::class, 'campos'])->name(
 Route::get('/proyectos', [ProyectosController::class, 'index'])->name('proyectos');
 
 
+//GRUPOS
+Route::get('/grupos',[GruposController::class,'index'])->name('grupos');

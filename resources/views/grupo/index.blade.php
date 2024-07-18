@@ -4,7 +4,7 @@
 
 <form >
     <fieldset ><br>
-        <h2>Accesos y permisos</h2>
+        <h2>Grupos</h2>
         <hr>
         <div class='row'>
             <div class="mb-3">

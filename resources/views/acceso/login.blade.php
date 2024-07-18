@@ -1,8 +1,8 @@
 @extends('welcome')
 
 @section('content')
-<div class="b-example-divider"></div>
-    <br>
+
+ 
 
         <div class="row g-0">
 
