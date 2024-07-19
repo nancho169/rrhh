@@ -10,7 +10,7 @@ use App\Http\Controllers\GruposController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExcelController;
 
-Route::get('/',[AccesoController::class,'acceso_login'])->name('inicio'); 
+Route::get('/',[PersonasController::class,'index'])->name('index'); 
 
 //RUTAS ACCESO
 Route::get('/acceso/perfil/{id}',[AccesoController::class,'perfil'])->name('perfil');

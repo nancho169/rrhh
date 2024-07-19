@@ -12,6 +12,7 @@ use App\Models\UserMetadata;
 
 class AccesoController extends Controller
 {
+       
         //
         public function perfil($id){
             
