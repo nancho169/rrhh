@@ -9,12 +9,17 @@ class Fichada extends Model
 {
     use HasFactory;
     protected $table = 'tabla_fichada';
-    /*protected $fillable = [
+    protected $fillable = [
         'id_usuario',
         'nombre',
         'fichada',
         'area',
+        'entrada',
+        'salida',
+        'descripcion',
+        'updated_at',
+        'created_at'
         
-    ];*/
+    ];
 
 }

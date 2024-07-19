@@ -17,25 +17,41 @@
             <tr>
                 <th>ID</th>
                 <th>Descripción</th>
-                <th>Id Superior</th>
-                <th>Versión</th>
+                <th>Color</th>
+                <th>Unidad</th>
+                <th>Sigla</th>
+                <th>Cantidad</th>
+                <th>Descuento</th>
+                <th>Referencia</th>
 
             </tr>
         </thead>
         <tbody>
-            @foreach ($areas as $area)
+            @foreach ($justificaciones as $jus)
             <tr>
                 <td>
-                    {{ $area->id}}
+                    {{ $jus->id}}
+                </td>
+                <td style="background-color: {{ $jus->color}}; color: white;">
+                    {{ $jus->descripcion}}
                 </td>
                 <td>
-                    {{ $area->descripcion}}
+                    {{ $jus->color}}
                 </td>
                 <td>
-                    {{ $area->id_superior}}
+                    {{ $jus->unidad}}
                 </td>
                 <td>
-                    {{ $area->version}}
+                    {{ $jus->sigla}}
+                </td>
+                <td>
+                    {{ $jus->cantidad}}
+                </td>
+                <td>
+                    {{ $jus->descuento}}
+                </td>
+                <td>
+                    {{ $jus->referencia}}
                 </td>
             </tr>
     @endforeach

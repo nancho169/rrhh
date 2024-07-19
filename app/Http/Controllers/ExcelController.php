@@ -27,8 +27,8 @@ class ExcelController extends Controller
         return Response::download($temp_file, $fileName);
     }
 
-    public function reloj(){
-        return view('reloj.index');
+    public function relog(){
+        return view('relog.index');
     }
 
     public function uploadExcel(Request $request)
@@ -41,7 +41,7 @@ class ExcelController extends Controller
         $spreadsheet = IOFactory::load($file->getRealPath());
         $sheet = $spreadsheet->getActiveSheet();
         $data = $sheet->toArray();
-        foreach ($data as $row) {
+        /*foreach ($data as $row) {
             // Ajusta los índices de acuerdo a la estructura de tu archivo Excel
             Fichada::create([
                 'id_usuario' => $row[0],
@@ -52,7 +52,7 @@ class ExcelController extends Controller
                 'descripcion' => $row[5]
 
             ]);
-        }
-        return view('reloj.migra_archivo', compact('data'));
+        }*/
+        return view('relog.migra_archivo', compact('data'));
     }
 }

@@ -22,7 +22,7 @@ Route::post('/acceso/registro',[AccesoController::class,'acceso_registro_post'])
 
 
 //EXPOTAR EXCEL
-Route::get('/reloj/', [ExcelController::class, 'reloj'])->name('reloj');
+Route::get('/relog', [ExcelController::class, 'relog'])->name('relog');
 Route::get('/export-excel', [ExcelController::class, 'exportar'])->name('exportar');
 Route::post('/reloj/migra_archivo', [ExcelController::class, 'uploadExcel'])->name('uploadExcel');
 

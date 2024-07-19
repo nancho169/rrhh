@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('descripcion',50);
+            $table->integer('cantidad');
+            $table->timestamp('fecha_creacion')->nullable();
             /* Inlcuye el id de persona*/
             $table->unsignedBigInteger('personas_id');
             $table->foreign('personas_id')->references('id')->on('persona')->onDelete('cascade');
