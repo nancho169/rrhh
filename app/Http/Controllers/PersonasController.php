@@ -9,9 +9,9 @@ class PersonasController extends Controller
 {
      public function index()
     {
-        $table = 'rrhh.persona';
-        $estructura = DB::select("DESCRIBE $table");
-        return view('persona.index', compact('estructura'));
+        $cat_per = DB::select("select count(*) as cant from persona");
+        $cat_org = DB::select("select count(*) as cant from organigrama");
+        return view('persona.index', compact('cat_per','cat_org'));
         //return response()->json($estructura);
     }
 
